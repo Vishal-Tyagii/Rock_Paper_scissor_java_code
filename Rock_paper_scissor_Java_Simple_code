@@ -1,0 +1,89 @@
+package com.company;
+import java.util.Random;
+import java.util.random.*;
+import java.util.Scanner;
+
+
+
+public class cwh_20_rockpaper {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        RandomGenerator r = new Random();
+        int comp = r.nextInt(1,4);
+        String S = "";
+
+        if (comp == 1){
+            S = "Rock";
+        }
+        else if (comp ==2){
+            S = "Paper";
+        }
+        else if (comp ==3){
+            S = "Scissor";
+        }
+        else{
+            System.out.println("Wrong Choice");
+        }
+
+
+        System.out.println(" \t \t Rock - Paper - Scissor - GAME : ");
+
+        System.out.println(("enter your Choice\n 1 for Rock \n " +
+                "2 for Paper \n " +
+                "3 for Scissor"));
+
+        String S1 = "";
+        int user = sc.nextInt();
+
+        if (user == 1){
+            S1 = "Rock";
+        }
+        else if (user ==2){
+            S1 = "Paper";
+        }
+        else if (user ==3){
+            S1 = "Scissor";
+        }
+        else{
+            System.out.println("Wrong Choice");
+        }
+
+
+
+        System.out.println("Computer chooses :  " + S);
+
+        System.out.println("Your Choice is  "+ S1);
+
+        if (user == 1 && comp == 1){
+            System.out.println("Draw");
+        }
+        else if (user ==1 && comp == 2){
+            System.out.println("Computer Win");
+        }
+        else if (user ==1 && comp ==3){
+            System.out.println("USer Win");
+        }
+        else if (user == 2 && comp ==1){
+            System.out.println("User win");
+        }
+        else if (user == 2 && comp == 2) {
+            System.out.println("Draw");
+        }
+        else if (user ==2 && comp ==3){
+            System.out.println("Computer win");
+        }
+        else if (user ==3 && comp ==1){
+            System.out.println("Computer win");
+        }
+        else if (user ==3 && comp ==2){
+            System.out.println("User win");
+        }
+        else if (user ==3 && comp ==3){
+            System.out.println("Draw");
+        }
+
+
+
+    }
+}
